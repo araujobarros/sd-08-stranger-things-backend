@@ -1,26 +1,14 @@
-module.exports = {
-  apps: [{
-    name: 'Stranger_things',
-    instaces: 2,
-    script: 'index.js',
-    watch: 'false',
-    exec_mode: 'cluster',
-    max_memory_restart: '200M',
-  }, {
-    script: './service-worker/',
-    watch: ['./service-worker'],
-  }],
-
-  deploy: {
-    production: {
-      user: 'SSH_USERNAME',
-      host: 'SSH_HOSTMACHINE',
-      ref: 'origin/master',
-      repo: 'GIT_REPOSITORY',
-      path: 'DESTINATION_PATH',
-      'pre-deploy-local': '',
-      'post-deploy': 'npm install && pm2 reload ecosystem.config.js --env production',
-      'pre-setup': '',
-    },
-  },
-};
+apps:
+  - script   : ./index.js
+    name     : 'Stranger_things'
+    instances: 2
+    exec_mode: cluster
+    watch    : false
+    max_memory_restart: '200M'
+  # - script : ./worker.js
+  #   name   : 'worker-app'
+  #   watch  : true
+  #   env    :
+  #     NODE_ENV: development
+  #   env_production:
+  #     NODE_ENV: production
