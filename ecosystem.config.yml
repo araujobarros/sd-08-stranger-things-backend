@@ -4,3 +4,6 @@ apps:
     max_memory_restart: 200M
     exec_mode: cluster
     instances: 2
+    env_hawkins:
+      PORT: 3000
+      UPSIDEDOWN_MODE: true
