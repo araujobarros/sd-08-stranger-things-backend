@@ -1,8 +1,8 @@
-app:
-  - name: app
+apps:
+- name: app-str-things
   script: ./index.js
   exec_mode: cluster
-  instance: 2
+  instances: 2
   env_prod:
     UPSIDEDOWN_MODE: true
   max_memory_restart: 200M
