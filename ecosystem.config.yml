@@ -6,4 +6,4 @@ apps:
     instances: 2
     env_hawkins:
       PORT: 3000
-      UPSIDEDOWN_MODE: true
+      UPSIDEDOWN_MODE: false
