@@ -3,7 +3,7 @@ const cors = require('cors');
 
 require('dotenv').config();
 
-const { PORT, UPSIDEDOWN_MODE } = process.env;
+const PORT = parseInt(process.env.PORT, 10) || 3000;
 
 const strangerThingsDataset = require('./data/dataset/stranger-things-characters.json');
 const StrangerThingsRepository = require('./data/repository/StrangerThings');
@@ -20,7 +20,7 @@ const strangerThingsService = new StrangerThingsService(
 
 app.use(cors());
 
-const hereIsTheUpsideDown = UPSIDEDOWN_MODE === 'false';
+const hereIsTheUpsideDown = process.env.UPSIDEDOWN_MODE === 'false';
 
 app.get('/', (req, res) => {
   const characters = strangerThingsService.search(
@@ -31,6 +31,6 @@ app.get('/', (req, res) => {
   res.status(200).json(characters);
 });
 
-app.listen(PORT || 3000, () => {
+app.listen(PORT, () => {
   console.log(`Escutando na porta ${PORT}`);
 });
