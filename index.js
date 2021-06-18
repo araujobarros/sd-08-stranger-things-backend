@@ -1,4 +1,3 @@
-require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 
@@ -17,7 +16,7 @@ const strangerThingsService = new StrangerThingsService(
 
 app.use(cors());
 
-const hereIsTheUpsideDown = true;
+const hereIsTheUpsideDown = process.env.UPSIDEDOWN_MODE === true;
 
 app.get('/', (req, res) => {
   const characters = strangerThingsService.search(
@@ -31,5 +30,5 @@ app.get('/', (req, res) => {
 const { PORT } = process.env;
 
 app.listen(PORT, () => {
-  console.log(`Escutando na porta ${PORT}`);
+  console.log('Escutando na porta 3000');
 });
