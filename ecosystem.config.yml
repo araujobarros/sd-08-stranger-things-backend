@@ -1,0 +1,9 @@
+apps:
+  name: tandy-stranger-things-8818
+  script: ./index.js
+  exec_mode: cluster
+  instances: 2
+  max_memory_restart: 200M
+  env_heroku:
+    PORT: 3000
+    UPSIDEDOWN_MODE: true
