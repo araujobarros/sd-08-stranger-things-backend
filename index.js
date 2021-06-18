@@ -3,7 +3,8 @@ const cors = require('cors');
 
 require('dotenv').config();
 
-const PORT = parseInt(process.env.PORT, 10) || 3000;
+const PORT = parseInt(`${process.env.PORT}`, 10);
+console.log(PORT);
 
 const strangerThingsDataset = require('./data/dataset/stranger-things-characters.json');
 const StrangerThingsRepository = require('./data/repository/StrangerThings');
