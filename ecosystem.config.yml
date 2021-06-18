@@ -1,5 +1,5 @@
 apps:
-  - name:
+  - name: 'liisaambrosen-sd-08-stranger-things-backend'
     script: ./index.js
     watch: false
     exec_mode: cluster
