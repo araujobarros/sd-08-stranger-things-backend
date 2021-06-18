@@ -6,10 +6,10 @@ const strangerThingsDataset = require('./data/dataset/stranger-things-characters
 const StrangerThingsRepository = require('./data/repository/StrangerThings');
 const StrangerThingsService = require('./services/StrangerThings');
 
-const { PORT } = process.env;
+const { PORT, UPSIDEDOWN_MODE } = process.env;
 const app = express();
 
-const hereIsTheUpsideDown = process.env.UPSIDEDOWN_MODE || 'false';
+const hereIsTheUpsideDown = UPSIDEDOWN_MODE;
 
 const strangerThingsRepository = new StrangerThingsRepository(
   strangerThingsDataset,
