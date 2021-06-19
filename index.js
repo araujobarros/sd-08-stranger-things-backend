@@ -16,8 +16,8 @@ const strangerThingsService = new StrangerThingsService(
 
 app.use(cors());
 
-const PORT = Number(process.env.PORT) || 3000;
-const hereIsTheUpsideDown = (process.env.UPSIDEDOWN_MODE === true);
+const PORT = parseInt(process.env.PORT, 10) || 3000;
+const hereIsTheUpsideDown = (process.env.UPSIDEDOWN_MODE === 'true');
 
 app.get('/', (req, res) => {
   const characters = strangerThingsService.search(
@@ -31,3 +31,11 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Escutando na porta ${PORT}`);
 });
+
+
+
+RUN npm install pm2 -g
+ENV PM2_PUBLIC_KEY rx7sumkmwmywrrd
+ENV PM2_SECRET_KEY rx9eyr4v12uf3zb
+
+CMD ["pm2-runtime", "app.js"]
