@@ -31,6 +31,6 @@ app.get('/', (req, res) => {
 const LOCALHOST = 3000;
 const PORT = process.env.PORT || LOCALHOST;
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
   console.log(`Escutando na porta ${PORT}`);
 });
