@@ -1,7 +1,7 @@
 # rodar o '$ pm2 ecosystem' e criar o ambiente; em formato yml parece ficar mais 'limpo' e legível que em config.js;
  apps:
   - script   : ./index.js
-    name     : 'JRGCast-stranger-things'
+    name     : 'jrgcast-bk'
     instances: 2
     exec_mode: cluster
     max_memory_restart: '200M'
