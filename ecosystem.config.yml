@@ -1,20 +1,13 @@
 # rodar o '$ pm2 ecosystem' e criar o ambiente; em formato yml parece ficar mais 'limpo' e legível que em config.js;
-
-  apps: [{
-    script: './index.js',
-    watch: false,
-  }],
-
-  deploy: {
-    production: {
-      user: 'SSH_USERNAME',
-      host: 'SSH_HOSTMACHINE',
-      ref: 'origin/master',
-      repo: 'GIT_REPOSITORY',
-      path: 'DESTINATION_PATH',
-      'pre-deploy-local': '',
-      'post-deploy': 'npm install && pm2 reload ecosystem.config.js --env production',
-      'pre-setup': '',
-    },
-  },
-};
+ apps:
+  - script   : ./index.js
+    name     : 'JRGCast-stranger-things'
+    instances: 2
+    exec_mode: cluster
+    max_memory_restart: '200M'
+    watch  : false
+    env    :
+      PORT: 3000
+    #   NODE_ENV: development
+    # env_production:
+    #   NODE_ENV: production
