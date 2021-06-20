@@ -20,7 +20,7 @@ const strangerThingsService = new StrangerThingsService(
 
 app.use(cors());
 
-const hereIsTheUpsideDown = UPSIDEDOWN_MODE; // no .env mesmo puxando false como string dá certo, já no yml não dá...
+const hereIsTheUpsideDown = UPSIDEDOWN_MODE; // no .env mesmo puxando false como string dá certo, já no yml não dá, loucura...
 
 app.get('/', (req, res) => {
   const characters = strangerThingsService.search(
