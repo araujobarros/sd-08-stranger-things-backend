@@ -20,7 +20,7 @@ const strangerThingsService = new StrangerThingsService(
 
 app.use(cors());
 
-const hereIsTheUpsideDown = UPSIDEDOWN_MODE; // falso fica com as letras invertidas? Wth
+const hereIsTheUpsideDown = UPSIDEDOWN_MODE; // no .env mesmo puxando false como string dá certo, já no yml não dá...
 
 app.get('/', (req, res) => {
   const characters = strangerThingsService.search(
