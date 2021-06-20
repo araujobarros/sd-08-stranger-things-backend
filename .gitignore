@@ -1,2 +1,3 @@
 node_modules
 .vscode
+# .env in this particular case, .env file should be send to avaliator
