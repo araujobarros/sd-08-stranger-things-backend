@@ -7,7 +7,10 @@
     max_memory_restart: '200M'
     watch  : false
     env    :
+      NODE_ENV: 'development'
       PORT: 3000
-    #   NODE_ENV: development
+    env_test :
+      NODE_ENV: 'test'
+      PORT: 4100
     # env_production:
     #   NODE_ENV: production

@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 
+const { NODE_ENV } = process.env;
 const { PORT } = process.env || 3000;
 
 const strangerThingsDataset = require('./data/dataset/stranger-things-characters.json');
@@ -30,5 +31,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Escutando na porta ${PORT}`);
+  console.log(`Ambiente => ${NODE_ENV}; Escutando na porta ${PORT}`);
 });
