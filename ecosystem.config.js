@@ -1,5 +1,5 @@
-// facilidade vista no projeto do Tiago Bovolin: rodar o '$ pm2 ecosystem' e criar o ambiente
-// em formato yml parece ficar mais 'limpo' e legível que em config.js, mas deixei em JS mesmo 
+// rodar o '$ pm2 ecosystem' e criar o ambiente; em formato yml parece ficar mais 'limpo' e legível que em config.js, mas deixei em JS mesmo;
+// não é que tava no README? 
 module.exports = {
   apps: [{
     script: './index.js',
