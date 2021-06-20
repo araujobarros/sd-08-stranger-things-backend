@@ -3,6 +3,7 @@ const cors = require('cors');
 
 const { NODE_ENV } = process.env;
 const { PORT } = process.env || 3000;
+const { UPSIDEDOWN_MODE } = process.env;
 
 const strangerThingsDataset = require('./data/dataset/stranger-things-characters.json');
 const StrangerThingsRepository = require('./data/repository/StrangerThings');
@@ -19,7 +20,7 @@ const strangerThingsService = new StrangerThingsService(
 
 app.use(cors());
 
-const hereIsTheUpsideDown = process.env.UPSIDEDOWN_MODE;
+const hereIsTheUpsideDown = UPSIDEDOWN_MODE; // falso fica com as letras invertidas? Wth
 
 app.get('/', (req, res) => {
   const characters = strangerThingsService.search(
@@ -31,5 +32,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Ambiente => ${NODE_ENV}; Escutando na porta ${PORT}`);
+  console.log(`Ambiente: ${NODE_ENV} => Escutando na porta ${PORT};`);
 });

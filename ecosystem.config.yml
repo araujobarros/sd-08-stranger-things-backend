@@ -8,9 +8,11 @@
     watch  : false
     env    :
       NODE_ENV: 'development'
+      UPSIDEDOWN_MODE: false
       PORT: 3000
     env_test :
       NODE_ENV: 'test'
-      PORT: 4100
+      UPSIDEDOWN_MODE: false
+      PORT: 3100
     # env_production:
     #   NODE_ENV: production
