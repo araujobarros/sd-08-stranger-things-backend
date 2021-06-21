@@ -31,5 +31,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Estamos em: ${NODE_ENV} => Escutando na porta ${PORT};`);
+  console.log(`Estamos no ambiente: ${NODE_ENV} => Escutando na porta ${PORT};`);
 });
