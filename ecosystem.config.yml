@@ -9,10 +9,9 @@
     env    :
       NODE_ENV: 'development'
       # UPSIDEDOWN_MODE: '' no .env mesmo puxando false como string dá certo, já pelo yml não dá...
-      PORT: 3000
     env_test :
       NODE_ENV: 'test'
-      UPSIDEDOWN_MODE: '' # Boolean('') evals as false
-      PORT: 3000
+      # UPSIDEDOWN_MODE: '' # Boolean('') evals as false
+      # PORT: 3000
     # env_production:
     #   NODE_ENV: production
