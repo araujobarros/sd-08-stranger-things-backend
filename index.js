@@ -16,12 +16,14 @@ const strangerThingsService = new StrangerThingsService(
   strangerThingsRepository,
 );
 
+const hereIsTheUpsideDown = UPSIDEDOWN_MODE === 'true';
+
 app.use(cors());
 
 app.get('/', (req, res) => {
   const characters = strangerThingsService.search(
     req.query,
-    UPSIDEDOWN_MODE,
+    hereIsTheUpsideDown,
   );
 
   res.status(200).json(characters);
