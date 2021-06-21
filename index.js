@@ -21,12 +21,12 @@ const hereIsTheUpsideDown = process.env.UPSIDEDOWN_MODE === 'true';
 const PORT = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
-  const character = strangerThingsService.search(
+  const characters = strangerThingsService.search(
     req.query,
     hereIsTheUpsideDown,
   );
 
-  res.status(200).json(character);
+  res.status(200).json(characters);
 });
 
 app.listen(PORT, () => {
