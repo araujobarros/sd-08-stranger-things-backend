@@ -1,7 +1,13 @@
 apps:
 
-- name: upside-down
+- name: stranger-things
   script: ./index.js
   exec_mode: cluster
   instances: 2
   max_memory_restart: '200M'
+  env_hawkins:
+    PORT: 3000
+    UPSIDEDOWN_MODE: false
+  env_upside-down:
+    PORT: 3000
+    UPSIDEDOWN_MODE: true
