@@ -20,7 +20,7 @@ app.use(cors());
 app.get('/', (req, res) => {
   const characters = strangerThingsService.search(
     req.query,
-    process.env.UPSIDEDOWN_MODE === 'false',
+    process.env.UPSIDEDOWN_MODE === 'true',
   );
 
   res.status(200).json(characters);
