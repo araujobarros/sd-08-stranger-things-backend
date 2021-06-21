@@ -11,7 +11,7 @@ const app = express();
 const PORT = parseInt(process.env.PORT) || 3000;
 
 // const hereIsTheUpsideDown = process.env.UPSIDEDOWN_MODE;
-const hereIsTheUpsideDown = process.env.UPSIDEDOWN_MODE === 'true';
+const hereIsTheUpsideDown = process.env.UPSIDEDOWN_MODE === false;
 
 const strangerThingsRepository = new StrangerThingsRepository(
   strangerThingsDataset,
