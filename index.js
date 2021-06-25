@@ -32,3 +32,6 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Escutando na porta ${PORT}`);
 });
+
+// heroku create gustaft86-bk --remote hawkins
+// heroku create gustaft86-bd --remote upside-down
