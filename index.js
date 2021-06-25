@@ -27,9 +27,9 @@ app.get('/', (req, res) => {
   res.status(200).json(characters);
 });
 
-const porta_sugerida = 3000;
+const portaSugerida = 3000;
 
-const PORT = process.env.PORT || porta_sugerida;
+const PORT = process.env.PORT || portaSugerida;
 
 app.listen(PORT, () => {
   console.log(`Escutando na porta ${PORT}`);
