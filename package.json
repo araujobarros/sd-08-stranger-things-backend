@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "jest --runInBand  --detectOpenHandles --forceExit",
+    "test": "jest --runInBand  --detectOpenHandles --forceExit --verbose",
     "lint": "eslint --no-inline-config --ext .js,.jsx --no-error-on-unmatched-pattern -c .eslintrc.json ."
   },
   "keywords": [],
