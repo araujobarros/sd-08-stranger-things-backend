@@ -9,7 +9,6 @@ const makeFilterFn = (params = {}) => ({ name, status, origin }) => {
 
   return true;
 };
-
 class StrangerThingsRepository {
   constructor(dataset) {
     this.dataset = dataset;
@@ -23,5 +22,4 @@ class StrangerThingsRepository {
     return this.dataset.filter(makeFilterFn(params)).splice(offset, size);
   }
 }
-
 module.exports = StrangerThingsRepository;
