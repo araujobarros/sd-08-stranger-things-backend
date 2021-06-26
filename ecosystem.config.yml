@@ -1,13 +1,13 @@
 apps:
 
-- name: clenio-galvao-bk
+- name: hawkins
   script: ./index.js
   exec_mode: cluster
   instances: 2
   watch: false
   max_memory_restart: 200M
 
-- name: clenio-galvao-bd
+- name: upsidedown
   script: ./index.js
   exec_mode: cluster
   instances: 2
