@@ -28,7 +28,7 @@ app.get('/', (req, res) => {
   res.status(200).json(characters);
 });
 
-const portaSugerida = 3001;
+const portaSugerida = 3000;
 
 console.log(process.env.PORT);
 
