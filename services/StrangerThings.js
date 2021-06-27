@@ -8,6 +8,7 @@ class StrangerThingsService {
   }
 
   search({ page, size, ...params }, upsideDownMode) {
+    console.log(upsideDownMode)
     const characters = this.repository.search(params, { page, size });
 
     if (upsideDownMode) {
