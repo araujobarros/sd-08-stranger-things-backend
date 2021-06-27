@@ -22,7 +22,7 @@ const { PORT, UPSIDEDOWN_MODE } = process.env;
 app.get('/', (req, res) => {
   const characters = strangerThingsService.search(
     req.query,
-    UPSIDEDOWN_MODE === true,
+    UPSIDEDOWN_MODE === 'true',
   );
 
   res.status(200).json(characters);
