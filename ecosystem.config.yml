@@ -1,5 +1,5 @@
 apps:
-  - name: App
+  - name: marciodanielll
     script: ./index.js
     exec_mode: cluster
     instances: 2
