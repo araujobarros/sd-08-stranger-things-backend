@@ -21,7 +21,7 @@ const hereIsTheUpsideDown = true;
 app.get('/', (req, res) => {
   const characters = strangerThingsService.search(
     req.query,
-    hereIsTheUpsideDown
+    hereIsTheUpsideDown,
   );
 
   res.status(200).json(characters);
