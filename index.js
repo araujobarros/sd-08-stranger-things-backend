@@ -21,12 +21,16 @@ const hereIsTheUpsideDown = true;
 app.get('/', (req, res) => {
   const characters = strangerThingsService.search(
     req.query,
-    hereIsTheUpsideDown,
+    hereIsTheUpsideDown
   );
 
   res.status(200).json(characters);
 });
 
 app.listen(process.env.PORT || 3000, () => {
-  console.log('Escutando na porta 3000');
+  console.log(
+    'Express server listening on port %d in %s mode',
+    this.address().port,
+    app.settings.env,
+  );
 });
