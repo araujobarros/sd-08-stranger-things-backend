@@ -1,8 +1,7 @@
 const express = require('express');
 const cors = require('cors');
-
-// https://blog.rocketseat.com.br/variaveis-ambiente-nodejs/
 require('dotenv').config();
+// https://blog.rocketseat.com.br/variaveis-ambiente-nodejs/
 
 const strangerThingsDataset = require('./data/dataset/stranger-things-characters.json');
 const StrangerThingsRepository = require('./data/repository/StrangerThings');
