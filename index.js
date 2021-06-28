@@ -19,8 +19,6 @@ const strangerThingsService = new StrangerThingsService(
 
 app.use(cors());
 
-
-
 app.get('/', (req, res) => {
   const characters = strangerThingsService.search(
     req.query,
