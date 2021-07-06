@@ -5,7 +5,7 @@ apps:
   instances: 2
   watch: false
   max_memory_restart: 200M
-  env_heroku:
+  env_hawkins:
     UPSIDEDOWN_MODE: false
-  env_bidfca-bd:
+  env_upside_down:
     UPSIDEDOWN_MODE: true
