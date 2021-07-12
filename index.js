@@ -10,7 +10,7 @@ const app = express();
 // REQ01
 require('dotenv').config();
 
-const PORT = Number(process.env.PORT) || 3000;
+const PORT = process.env.PORT || 3000;
 const hereIsTheUpsideDown = process.env.UPSIDEDOWN_MODE;
 // FIM.
 
